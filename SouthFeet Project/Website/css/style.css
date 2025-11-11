@@ -1,0 +1,490 @@
+/* ---------------------------- GLOBAL STYLES ----------------------------- */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: 'Roboto Flex', sans-serif;
+}
+
+body {
+  background-color: #ffffff;
+  color: #000000;
+  line-height: 1.6;
+}
+
+/* ---------------------------- CONTAINER ----------------------------- */
+.container {
+  width: 90%;
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 1rem;
+}
+
+/* ---------------------------- HEADER / NAVBAR ----------------------------- */
+.header {
+  position: sticky;
+  top: 0;
+  width: 100%;
+  background-color: #ffffff;
+  border-bottom: 1px solid #eee;
+  z-index: 1000;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.05);
+  transition: all 0.3s ease;
+}
+
+.logo {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.logo img {
+  width: 120px;
+  height: 120px;
+  object-fit: contain;
+}
+
+.logo h1 {
+  font-weight: 200;
+  letter-spacing: 1px;
+}
+
+.navbar ul {
+  display: flex;
+  gap: 1.5rem;
+  list-style: none;
+}
+
+.navbar a {
+  text-decoration: none;
+  color: #000000;
+  font-weight: 500;
+  transition: color 0.3s ease;
+}
+
+.navbar a:hover,
+.navbar a.active {
+  color: #555555;
+}
+
+.header .container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 1rem 0;
+}
+
+/* ---------------------------- SECTIONS ----------------------------- */
+section {
+  padding: 4rem 0;
+  text-align: center;
+}
+
+section h2 {
+  font-size: 2rem;
+  margin-bottom: 1rem;
+}
+
+section p {
+  max-width: 700px;
+  margin: 0 auto 2rem;
+  font-size: 1rem;
+  color: #555;
+}
+
+/* ---------------------------- HERO SECTION ----------------------------- */
+.hero {
+  text-align: center;
+  padding: 6rem 1rem;
+  background-color: #ffffff;
+}
+
+.hero img {
+  width: 160px;
+  height: 160px;
+  border-radius: 50%;
+  object-fit: cover;
+  margin-bottom: 1.5rem;
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+  transition: transform 0.4s ease;
+}
+
+.hero img:hover {
+  transform: scale(1.05);
+}
+
+.hero h2 {
+  font-size: 2.5rem;
+  margin-bottom: 1rem;
+  font-family: "Playfair Display", serif;
+}
+
+.hero p {
+  font-size: 1.1rem;
+  max-width: 600px;
+  margin: 0 auto 2rem;
+  color: #555;
+}
+
+.btn {
+  background-color: #000000;
+  color: #ffffff;
+  border: none;
+  padding: 0.75rem 1.5rem;
+  cursor: pointer;
+  border-radius: 4px;
+  font-weight: 500;
+  transition: all 0.3s ease;
+}
+
+.btn:hover {
+  background-color: #333333;
+  transform: translateY(-2px);
+}
+
+/* ---------------------------- FEATURED / ARTISTS / RELEASES SECTION ----------------------------- */
+.featured,
+.artists,
+.releases {
+  padding: 5rem 1rem;
+  background-color: #fafafa;
+  text-align: center;
+}
+
+.featured h3,
+.artists h2,
+.releases h2 {
+  font-size: 2rem;
+  font-family: "Playfair Display", serif;
+  margin-bottom: 2rem;
+}
+
+.cards {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+  gap: 2rem;
+  justify-content: center;
+  align-items: stretch;
+}
+
+/* ---------------------------- CARD STYLE ----------------------------- */
+.card,
+.artist-card,
+.release-card {
+  background-color: #fff;
+  border-radius: 1rem;
+  overflow: hidden;
+  padding: 1.5rem 1rem;
+  box-shadow: 0 3px 10px rgba(0, 0, 0, 0.08);
+  text-align: center;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.card:hover,
+.artist-card:hover,
+.release-card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 6px 20px rgba(0, 0, 0, 0.12);
+}
+
+/* ---------------------------- IMAGES ----------------------------- */
+.card img,
+.artist-card img,
+.release-card img {
+  width: 100%;
+  height: 180px;
+  object-fit: cover;
+  border-radius: 12px;
+  margin-bottom: 1rem;
+  transition: transform 0.4s ease;
+}
+
+.card img:hover,
+.artist-card img:hover,
+.release-card img:hover {
+  transform: scale(1.03);
+}
+
+/* ---------------------------- TEXT CONTENT ----------------------------- */
+.card h4,
+.artist-card h4,
+.release-card h4 {
+  font-size: 1.1rem;
+  color: #222;
+  margin: 10px 0 5px;
+}
+
+.card p,
+.artist-card p,
+.release-card p {
+  font-size: 0.95rem;
+  color: #555;
+  margin-bottom: 10px;
+}
+
+.card .btn,
+.artist-card .btn,
+.release-card .btn {
+  display: inline-block;
+  margin-top: 5px;
+  padding: 10px 18px;
+  border-radius: 8px;
+  background: #111;
+  color: #fff;
+  text-decoration: none;
+  transition: background 0.3s ease, transform 0.2s ease;
+}
+
+.card .btn:hover,
+.artist-card .btn:hover,
+.release-card .btn:hover {
+  background: #e63946;
+  transform: translateY(-2px);
+}
+
+/* ---------------------------- EVENTS PAGE ----------------------------- */
+.events {
+  padding: 5rem 1rem;
+  background-color: #fff;
+  text-align: center;
+}
+
+.event-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  gap: 2rem;
+  justify-content: center;
+  align-items: stretch;
+  margin-top: 2rem;
+}
+
+.event-card {
+  background-color: #fafafa;
+  border-radius: 1rem;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.08);
+  padding: 1.5rem;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.event-card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 6px 20px rgba(0,0,0,0.12);
+}
+
+.event-card img {
+  width: 100%;
+  max-width: 300px;
+  height: 200px;
+  object-fit: cover;
+  border-radius: 12px;
+  margin-bottom: 1rem;
+}
+
+/* ---------------------------- SHOP PAGE ----------------------------- */
+.shop {
+  padding: 5rem 1rem;
+  background-color: #fafafa;
+  text-align: center;
+}
+
+.shop h2 {
+  font-size: 2rem;
+  font-family: "Playfair Display", serif;
+  margin-bottom: 2rem;
+}
+
+.product-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+  gap: 2rem;
+  justify-content: center;
+  align-items: stretch;
+  margin-top: 2rem;
+}
+
+.product-card {
+  background-color: #ffffff;
+  border-radius: 1rem;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.08);
+  padding: 1.5rem;
+  transition: transform 0.3s ease;
+}
+
+.product-card:hover {
+  transform: translateY(-5px);
+}
+
+.product-card img {
+  width: 100%;
+  max-width: 250px;
+  height: 220px;
+  object-fit: cover;
+  border-radius: 12px;
+  margin-bottom: 1rem;
+}
+
+.product-card h4 {
+  font-size: 1.1rem;
+  color: #222;
+  margin-bottom: 0.5rem;
+}
+
+.product-card p {
+  font-size: 0.95rem;
+  color: #555;
+}
+
+/* ---------------------------- FOOTER ----------------------------- */
+.footer {
+  background: #000000;
+  color: #ffffff;
+  padding: 2rem 1rem;
+  text-align: center;
+  margin-top: 4rem;
+}
+
+.footer p {
+  margin-bottom: 1rem;
+  font-size: 0.9rem;
+}
+
+.social-icons {
+  display: flex;
+  justify-content: center;
+  gap: 1rem;
+}
+
+.social-icons span {
+  margin-right: 10px;
+  font-size: 20px;
+  cursor: pointer;
+  transition: color 0.3s;
+}
+
+.social-icons span:hover {
+  color: #f06595;
+}
+
+/* ---------------------------- ANIMATIONS ----------------------------- */
+.fade-in {
+  opacity: 0;
+  transform: translateY(30px);
+  animation: fadeIn 1s ease forwards;
+}
+
+@keyframes fadeIn {
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/* ---------------------------- RESPONSIVE ----------------------------- */
+@media (max-width: 768px) {
+  .cards, .event-grid, .product-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .navbar ul {
+    flex-direction: column;
+    background-color: #ffffff;
+    position: absolute;
+    top: 70px;
+    right: 0;
+    width: 100%;
+    max-height: 0;
+    overflow: hidden;
+    transition: max-height 0.3s ease-in-out;
+    border-bottom: 1px solid #eee;
+  }
+
+  .navbar.open ul {
+    max-height: 400px;
+  }
+
+  .navbar ul li {
+    text-align: center;
+    padding: 1rem 0;
+    border-top: 1px solid #f0f0f0;
+  }
+
+  .menu-toggle {
+    display: block;
+    background: none;
+    border: none;
+    font-size: 1.8rem;
+    cursor: pointer;
+  }
+  section h2 {
+    font-size: 1.6rem;
+  }
+}
+ 
+/* Contact Form Container */
+.contact-form {
+  max-width: 500px;
+  margin: 50px auto;
+  background: #ffffff;
+  padding: 30px 40px;
+  border-radius: 15px;
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.1);
+  font-family: 'Poppins', sans-serif;
+}
+
+/* Form Labels */
+.contact-form label {
+  display: block;
+  margin-bottom: 8px;
+  font-weight: 600;
+  color: #333;
+  font-size: 0.95rem;
+}
+
+/* Form Inputs and Textareas */
+.contact-form input,
+.contact-form textarea {
+  width: 100%;
+  padding: 12px 15px;
+  margin-bottom: 20px;
+  border: 1px solid #ddd;
+  border-radius: 8px;
+  font-size: 1rem;
+  transition: all 0.3s ease;
+  background: #fafafa;
+}
+
+/* Focus Effect */
+.contact-form input:focus,
+.contact-form textarea:focus {
+  border-color: #007bff;
+  background: #fff;
+  outline: none;
+  box-shadow: 0 0 5px rgba(0, 123, 255, 0.3);
+}
+
+/* Submit Button */
+.contact-form .btn {
+  display: inline-block;
+  background: #007bff;
+  color: #fff;
+  border: none;
+  padding: 12px 25px;
+  border-radius: 8px;
+  cursor: pointer;
+  font-size: 1rem;
+  font-weight: 600;
+  transition: background 0.3s ease, transform 0.2s ease;
+}
+
+/* Button Hover */
+.contact-form .btn:hover {
+  background: #0056b3;
+  transform: translateY(-2px);
+}
+
+/* Responsive Design */
+@media (max-width: 600px) {
+  .contact-form {
+    padding: 25px 20px;
+  }
+}
